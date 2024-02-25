@@ -1,0 +1,347 @@
+.quote {
+    padding-left: 50px;
+    border-left: 4px solid #e2e2e2;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+  .quote p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #333333;
+    text-indent: 0px;
+  }
+  .quote cite {
+    text-indent: 0px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    color: #aaaaaa;
+  }
+
+.info p {
+    text-indent: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #333333;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 10vw; */
+    /* overflow-x: hidden; */
+}
+
+.information h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #000;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    tab-size: 10px;
+}
+
+/* .info {
+    display: flex;
+    justify-content: center;
+} */
+
+.information p {
+    text-indent: 5vw;
+}
+
+.information blockquote p{
+    text-indent: 0px;
+}
+
+.information li {
+    font-size: 22px;
+}
+
+.information div {
+    padding-top: 20px;
+}
+
+footer {
+    /* display: flex; */
+    /* position: absolute; */
+    /* bottom: 100vh;
+    bottom: 0px; */
+    width: 100vw;
+    height: 100px;
+    background-color: #dddddd;
+}
+
+.quote_div {
+    padding-top: 0px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+.logo {
+    font-size: 2vw;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+    scroll-padding: 50px;
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Raleway";
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+}
+
+.top-nav {
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222;
+    /* background: linear-gradient(to left, #f46b45, #eea849); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFF;
+    height: 70px;
+    width: 100vw;
+    padding: 1em;
+    padding-right: 40px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links_of_general {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+.links_of_general a {
+    display: flex;
+    text-justify: center;
+}
+
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 5vw;
+    max-width: 25px;
+    transition: transform 1500ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 20px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* @media (max-width: 700px) { */
+.menu-button-container {
+    display: flex;
+    font-family: "Raleway";
+    text-shadow: 0px 0px 5px #FFF;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.menu {
+    /* overflow-y: auto; */
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+    border-radius: 20px;
+}
+#menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 100px;
+    text-shadow: 0px 0px 5px #FFF;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+#menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 80px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.info {
+    margin: 20px;
+}
+
+.div_links {
+    display: flex;
+    justify-self: end;
+}
+
+.title_main {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 70%;
+    color: white;
+    background-color: #222;
+}
+.menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+
+.menu > li:first-child {
+    border-top: none;
+}
+
+.menu > li:last-child {
+    border-bottom: 1px solid #444;
+    border-bottom-left-radius: 20px;
+}
+
+.top-nav a {
+    text-shadow: 0px 0px 5px #FFF;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.top-nav .logo a {
+    font-size: 13px;
+}
+
+.top-nav a:hover {
+    text-shadow: 0px 0px 10px #FFF;
+}
+
+.slide_of_muiseum {
+    padding: 100px;
+    background-color: #666;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    height: auto;
+    padding: 20px;
+    /* position: absolute; */
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 100vw;
+    margin: 0px;
+    margin-bottom: 100px;
+}
+
+main {
+    overflow-x:hidden;
+    width: 100vw;
+}
+
+.muiseum {
+    max-width: 800px;
+    background-color: #e2e2e2;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 22px;
+    padding: 20px;
+    border: 1px solid #222;
+    width: 90vw;
+    border-radius: 20px;
+
+}
+
+.muiseum img {
+    width: calc(90vw - 100px);
+    max-width: 720px;
+    border-radius: 20px;
+}
